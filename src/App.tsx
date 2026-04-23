@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/landing/Nav";
 import { Hero } from "@/components/landing/Hero";
 import { BrandTech } from "@/components/landing/BrandTech";
@@ -13,21 +12,7 @@ import { Cases } from "@/components/landing/Cases";
 import { ContactForm } from "@/components/landing/Form";
 import { Footer } from "@/components/landing/Footer";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Ультраспрей — напыляемая акустика и огнезащита | Acoustic Group" },
-      {
-        name: "description",
-        content:
-          "Ультраспрей — целлюлозное напыление для акустики (α_w 0,50–0,90) и огнезащиты КМ1 несущих конструкций общественных пространств. Решение Acoustic Group.",
-      },
-    ],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function App() {
   return (
     <main className="min-h-screen bg-background text-[var(--brand-navy)]">
       <Nav />
